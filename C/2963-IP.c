@@ -19,4 +19,3 @@ int main() {
     printf("i)%f\n ii)%f\n ii)%f\n iv)%f\n v)%f\n vi)%f\n vii)%f\n vii)%f\n viii)%f\n ix)%f\n) x)%f\n", i, ii, iii, iv, v, vi, vii, viii, ix, x);
 	return 0;
 }
-errou kkkk
