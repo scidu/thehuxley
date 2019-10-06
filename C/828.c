@@ -10,6 +10,6 @@ int main(void)
     scanf("%f", &vh);
     printf("\nInforme a quantidade mensal de trabalho:");
     scanf("%f", &hm);
-    printf("\nResultado: %.1f", (vh*hm));
-	return 0;
+    printf("\nResultado: %.1f", (vh * hm));
+    return 0;
 }

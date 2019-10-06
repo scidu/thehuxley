@@ -7,6 +7,6 @@ int main(void)
 {
     int nascimento, atual;
     scanf("%d%d", &nascimento, &atual);
-    printf("%d", (atual-nascimento));
-	return 0;
+    printf("%d", (atual - nascimento));
+    return 0;
 }

@@ -7,15 +7,15 @@ int main(void)
 {
     char s;
     scanf(" %c", &s);
-    if(s == 'F')
+    if (s == 'F')
     {
         printf("Feminino");
     }
-    else if(s == 'M')
+    else if (s == 'M')
     {
         printf("Masculino");
     }
     else
         printf("Sexo nao definido");
-	return 0;
+    return 0;
 }

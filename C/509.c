@@ -2,7 +2,7 @@
 
 int main()
 {
-	int x, y;
+    int x, y;
 
     scanf("%d\n%d", &x, &y);
 
@@ -59,6 +59,6 @@ int main()
     {
         printf("0\n");
     }
-    
-	return 0;
+
+    return 0;
 }

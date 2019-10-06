@@ -3,7 +3,8 @@
 #include <math.h>
 #include <stdlib.h>
 
-int main(){
+int main()
+{
     float a;
     scanf("%f", &a);
     if (a >= 1.0 && a < 7.0)

@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main(){
+int main()
+{
     float a;
     printf("Digite o pH da solucao:\n");
     scanf("%f", &a);

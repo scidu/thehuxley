@@ -49,5 +49,5 @@ int main(void)
     {
         printf("Desempenho otimo");
     }
-	return 0;
+    return 0;
 }

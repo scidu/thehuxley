@@ -2,7 +2,7 @@
 
 int main()
 {
-	int ig, ia, encap, ind, str, q;
+    int ig, ia, encap, ind, str, q;
     q = 0;
 
     scanf("%d %d %d %d %d", &ig, &ia, &encap, &ind, &str);
@@ -28,6 +28,6 @@ int main()
     {
         printf("0");
     }
-    
-	return 0;
+
+    return 0;
 }

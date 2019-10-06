@@ -2,7 +2,7 @@
 
 int main()
 {
-	int n, r;
+    int n, r;
 
     scanf("%d", &n);
 
@@ -16,6 +16,6 @@ int main()
     {
         printf("O numero eh %d e ele eh impar", n);
     }
-    
-	return 0;
+
+    return 0;
 }

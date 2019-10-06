@@ -9,19 +9,19 @@ int main(void)
     int q;
     q = 0;
     scanf("%f%f%f", &a, &b, &c);
-    m = (a+b+c)/3;
-    if(a > m)
+    m = (a + b + c) / 3;
+    if (a > m)
     {
         q++;
     }
-    if(b > m)
+    if (b > m)
     {
         q++;
     }
-    if(c > m)
+    if (c > m)
     {
         q++;
     }
     printf("%d", q);
-	return 0;
+    return 0;
 }

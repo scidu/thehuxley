@@ -2,12 +2,12 @@
 
 int main()
 {
-	int livros, alunos;
+    int livros, alunos;
     float quantia;
 
     scanf("%d%d", &livros, &alunos);
 
-    quantia = alunos/livros;
+    quantia = alunos / livros;
 
     if (quantia <= 8)
     {
@@ -25,6 +25,6 @@ int main()
     {
         printf("D");
     }
-    
-	return 0;
+
+    return 0;
 }

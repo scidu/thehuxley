@@ -11,5 +11,5 @@ int main(void)
     m = (d * 0.75);
     printf("%.2f", m);
     system("pause");
-	return 0;
+    return 0;
 }

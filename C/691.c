@@ -1,9 +1,10 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int a, b, aux;
     scanf("%d %d", &a, &b);
-    if (a>b)
+    if (a > b)
     {
         printf("%d %d", b, a);
     }
@@ -11,6 +12,6 @@ int main() {
     {
         printf("%d %d", a, b);
     }
-      
-	return 0;
+
+    return 0;
 }

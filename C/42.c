@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() 
+int main()
 {
     int idade;
 
@@ -18,6 +18,6 @@ int main()
     {
         printf("eleitor facultativo");
     }
-    
-	return 0;
+
+    return 0;
 }
