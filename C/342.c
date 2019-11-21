@@ -2,21 +2,34 @@
 
 int main()
 {
-    int n, divisor, d3 = 0;
-    divisor = 1;
+
+    int n, r, d, rf;
+    d = 3;
+    r = 0;
 
     scanf("%d", &n);
 
-    while (divisor <= n)
+    while (d <= n)
     {
-        if ((n / divisor) % 3 == 0)
+        if (n % d == 0)
         {
-            d3++;
+            if (d % 3 == 0)
+            {
+                r++;
+            }
         }
-        divisor++;
+        d++;
     }
 
-    printf("%d", d3);
+    if (r > 0)
+    {
+        printf("%d", r);
+        ;
+    }
+    else
+    {
+        printf("O numero nao possui divisores multiplos de 3!");
+    }
 
     return 0;
 }
