@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-int fatorial(int n)
+double fatorial(int n)
 {
-    int fat;
+    double fat;
 
     if (n <= 1)
     {
@@ -67,23 +67,30 @@ int proxprimo(int n)
 
 int main()
 {
-    int count, i, primo;
-    double elemento;
+    int i, n;
+    double soma = 0;
 
-    scanf("%d", count);
+    scanf("%d", &n);
 
-    if (count == 0)
+    for (i = 1; i <= n; i++)
     {
-        printf("0.00");
-    }
-    else
-    {
-        for (i = 1; i < count; i++)
+        if (primo(i) || i == 1)
         {
-            elemento = fatorial(i) / primo;
-            
+            soma = soma + (fatorial(i)) / i;
+            printf("%d!/%d", i, i);
+        }
+        else
+        {
+            soma = soma + (fatorial(i)) / proxprimo(i);
+            printf("%d!/%d", i, proxprimo(i));
+        }
+        if (i < n)
+        {
+            printf(" + ");
         }
     }
+
+    printf("\n%.2lf", soma);
 
     return 0;
 }

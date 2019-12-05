@@ -1,34 +1,33 @@
 #include <stdio.h>
 #include <string.h>
-#include <ctype.h>
+#include <strings.h>
 
 int main()
 {
-	char ass[10], assinatura[10];
     int anos;
     double valor;
+    char ass[10];
 
-    gets(ass);
-    scanf("%d", &anos);
-    assinatura[10] = toupper(ass[10]);
+    scanf("%s %d", ass, &anos);
 
-    if (strcmp(assinatura,"MURAL") == 0)
+    if (strcasecmp(ass, "Mural"))
     {
-        valor = anos * 200;
+        valor = 200 * anos;
     }
-    else if (strcmp(assinatura,"O CORETO") == 0)
+    else if (strcasecmp(ass, "O"))
     {
-        valor = anos * 235;
+        valor = 235 * anos;
     }
-    else if (strcmp(assinatura,"MEU LAR") == 0)
+    else if (strcasecmp(ass, "Meu"))
     {
-        valor = anos * 162;
+        valor = (180 - (180 / 10)) * anos;
     }
-    else if (strcmp(assinatura,"SUA MESA") == 0)
+    else if (strcasecmp(ass, "Sua"))
     {
-        valor = anos * 207;
+        valor = (230 - (230 / 10)) * anos;
     }
-    printf("%.2lf\n", valor);
 
-	return 0;
+    printf("%.2lf", valor);
+
+    return 0;
 }
