@@ -1,71 +1,23 @@
 #include <stdio.h>
-int ehprimo(int n)
-{
-    int cont = 0;
-    if (n <= 0 || n == 1)
-    {
-        return 0;
-    }
-    else
-    {
-        int i;
-        for (i = 2; i <= sqrt(n + 1); i++)
-        {
-            if (n % i == 0)
-            {
-                cont++;
-            }
-        }
-    }
-    if (cont >= 1)
-    {
-        return 0;
-    }
-    else
-    {
-        return 1;
-    }
-}
-int proximoprimo(int y)
-{
-    int aux = 0;
-    y++;
-    if (ehprimo(y) == 0)
-    {
-        proximoprimo(y);
-    }
-    else
-    {
-        aux = y;
-        return y;
-    }
-}
-int fatorial(int z)
-{
-    if (z == 1 || z == 0)
-    {
 
-        return 1;
-    }
-    else
-    {
-        return z * fatorial(z - 1);
-    }
-}
 int main()
 {
-    int i, k, func, cont, o;
-    scanf("%d", &k);
-    func = 0;
-    for (i = 1; i < k; ++i)
+    int vetor[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+    int vetorinv[10] = {0};
+    int i, aux;
+
+    for (i = 0; i < n / 2; i++)
     {
-        if (i <= ehprimo(i))
-            o = i;
-        else
-            o = proximoprimo(i);
-        func += fatorial(i) / o;
-        //		cont++;
+        aux = vetor[i];
+        vetor[i] = vetor[n - 1 - i];
+        vetor[n - 1 - i] = aux;
     }
-    printf("%d", func);
+
+    for (i = 0; i < 10; i++)
+    {
+        printf("%d", vetor[i]);
+    }
+
     return 0;
 }

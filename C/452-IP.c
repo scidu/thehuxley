@@ -1,33 +1,40 @@
 #include <stdio.h>
 #include <string.h>
-#include <strings.h>
 
 int main()
 {
-    int anos;
-    double valor;
     char ass[10];
+    char j1[10], j2[10], r1[10], r2[10];
+    strcpy(j1, "Mural");
+    strcpy(j2, "O Coreto");
+    strcpy(r1, "Meu Lar");
+    strcpy(r2, "Sua Mesa");
 
-    scanf("%s %d", ass, &anos);
+    int tempo;
+    double final;
 
-    if (strcasecmp(ass, "Mural"))
+    fgets(ass, 10, stdin);
+
+    scanf("%d", &tempo);
+
+    if (strcmp(ass, j1) == 0)
     {
-        valor = 200 * anos;
+        final = tempo * 200;
     }
-    else if (strcasecmp(ass, "O"))
+    else if (strcmp(ass, j2) == 0)
     {
-        valor = 235 * anos;
+        final = tempo * 235;
     }
-    else if (strcasecmp(ass, "Meu"))
+    else if (strcmp(ass, r1) == 0)
     {
-        valor = (180 - (180 / 10)) * anos;
+        final = (tempo * 180) * 0.9;
     }
-    else if (strcasecmp(ass, "Sua"))
+    else if (strcmp(ass, r2) == 0)
     {
-        valor = (230 - (230 / 10)) * anos;
+        final = (tempo * 230) * 0.9;
     }
 
-    printf("%.2lf", valor);
+    printf("%.2lf", final);
 
     return 0;
 }
