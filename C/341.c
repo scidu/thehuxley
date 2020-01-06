@@ -1,197 +1,116 @@
 #include <stdio.h>
 
-double valor(int dif, double valor)
-{
-    double final, desconto;
-    if (dif == 0)
-    {
-        if (valor <= 45)
-        {
-            final = valor;
-        }
-        
-        else if (valor <= 100)
-        {
-            desconto = 0.5 * (0.25 * valor);
-            final = valor - desconto;
-
-            if (final < 45)
-            {
-                final = 45;
-            }
-        }
-        else
-        {
-            desconto = 0.25 * valor;
-            final = valor - desconto;
-
-            if (final < 45)
-            {
-                final = 45;
-            }
-        }
-    }
-    else if (dif == 1)
-    {
-        if (valor <= 45)
-        {
-            final = valor;
-        }
-        else if (valor <= 100)
-        {
-            desconto = 0.5 * (0.20 * valor);
-            final = valor - desconto;
-
-            if (final < 45)
-            {
-                final = 45;
-            }
-        }
-        else
-        {
-            desconto = 0.20 * valor;
-            final = valor - desconto;
-
-            if (final < 45)
-            {
-                final = 45;
-            }
-        }
-    }
-    else if (dif == 2)
-    {
-        if (valor <= 45)
-        {
-            final = valor;
-        }
-        else if (valor <= 100)
-        {
-            desconto = 0.5 * (0.18 * valor);
-            final = valor - desconto;
-
-            if (final < 45)
-            {
-                final = 45;
-            }
-        }
-        else
-        {
-            desconto = 0.18 * valor;
-            final = valor - desconto;
-
-            if (final < 45)
-            {
-                final = 45;
-            }
-        }
-    }
-    else if (dif == 3)
-    {
-        if (valor <= 45)
-        {
-            final = valor;
-        }
-        else if (valor <= 100)
-        {
-            desconto = 0.5 * (0.15 * valor);
-            final = valor - desconto;
-
-            if (final < 45)
-            {
-                final = 45;
-            }
-        }
-        else
-        {
-            desconto = 0.15 * valor;
-            final = valor - desconto;
-
-            if (final < 45)
-            {
-                final = 45;
-            }
-        }
-    }
-    else if (dif == 4)
-    {
-        if (valor <= 45)
-        {
-            final = valor;
-        }
-        else if (valor <= 100)
-        {
-            desconto = 0.5 * (0.12 * valor);
-            final = valor - desconto;
-
-            if (final < 45)
-            {
-                final = 45;
-            }
-        }
-        else
-        {
-            desconto = 0.12 * valor;
-            final = valor - desconto;
-
-            if (final < 45)
-            {
-                final = 45;
-            }
-        }
-    }
-    else if (dif == 5)
-    {
-        if (valor <= 45)
-        {
-            final = valor;
-        }
-        else if (valor <= 100)
-        {
-            desconto = 0.5 * (0.10 * valor);
-            final = valor - desconto;
-
-            if (final < 45)
-            {
-                final = 45;
-            }
-        }
-        else
-        {
-            desconto = 0.10 * valor;
-            final = valor - desconto;
-
-            if (final < 45)
-            {
-                final = 45;
-            }
-        }
-    }
-
-    return final;
-}
-
 int main()
 {
     int n, i;
 
     scanf("%d", &n);
 
-    int difjogo[n];
-    double valorjogo[n], finaljogo[n];
-
     for (i = 0; i < n; i++)
     {
-        scanf("%d%lf", &difjogo[i], &valorjogo[i]);
-    }
+        int dif, i2;
+        double valori, valorf;
 
-    for (i = 0; i < n; i++)
-    {
-        finaljogo[i] = valor(difjogo[i], valorjogo[i]);
-    }
+        scanf("%d%lf", &dif, &valori);
 
-    for (i = 0; i < n; i++)
-    {
-        printf("Jogo[%d] = R$%.2lf\n", i, finaljogo[i]);
+        if (valori <= 45)
+        {
+            valorf = valori;
+        }
+        else
+        {
+            if (dif == 0)
+            {
+                for (i2 = 0; i2 < 3; i2++)
+                {
+                    if (valori <= 100)
+                    {
+                        valori = valori - ((valori * 0.25) / 2);
+                    }
+                    else
+                    {
+                        valori = valori - (valori * 0.25);
+                    }
+                }
+            }
+            if (dif == 1)
+            {
+                for (i2 = 0; i2 < 3; i2++)
+                {
+                    if (valori <= 100)
+                    {
+                        valori = valori - ((valori * 0.20) / 2);
+                    }
+                    else
+                    {
+                        valori = valori - (valori * 0.2);
+                    }
+                }
+            }
+            if (dif == 2)
+            {
+                for (i2 = 0; i2 < 3; i2++)
+                {
+                    if (valori <= 100)
+                    {
+                        valori = valori - ((valori * 0.18) / 2);
+                    }
+                    else
+                    {
+                        valori = valori - (valori * 0.18);
+                    }
+                }
+            }
+            if (dif == 3)
+            {
+                for (i2 = 0; i2 < 3; i2++)
+                {
+                    if (valori <= 100)
+                    {
+                        valori = valori - ((valori * 0.15) / 2);
+                    }
+                    else
+                    {
+                        valori = valori - (valori * 0.15);
+                    }
+                }
+            }
+            if (dif == 4)
+            {
+                for (i2 = 0; i2 < 3; i2++)
+                {
+                    if (valori <= 100)
+                    {
+                        valori = valori - ((valori * 0.12) / 2);
+                    }
+                    else
+                    {
+                        valori = valori - (valori * 0.12);
+                    }
+                }
+            }
+            if (dif == 5)
+            {
+                for (i2 = 0; i2 < 3; i2++)
+                {
+                    if (valori <= 100)
+                    {
+                        valori = valori - ((valori * 0.10) / 2);
+                    }
+                    else
+                    {
+                        valori = valori - (valori * 0.10);
+                    }
+                }
+            }
+            valorf = valori;
+            if (valorf < 45)
+            {
+                valorf = 45;
+            }
+        }
+
+        printf("Jogo[%d] = R$%.2lf\n", i, valorf);
     }
 
     return 0;
