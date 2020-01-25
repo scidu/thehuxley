@@ -3,65 +3,58 @@
 
 int main()
 {
-    char pos[8];
+    char acima[] = "acima";
+    char abaixo[] = "abaixo";
+    char string[7];
+    int r, limiar, n, l, c, soma;
 
-    int limiar, n, l, c, somacima = 0, somabaixo = 0;
+    fgets(string, 7, stdin);
 
-    scanf("%s", pos);
-    scanf("%d%d", &limiar, &n);
+    r = strlen(string);
+    string[r - 1] = '\0';
 
-    int matriz[n][n];
+    scanf("%d", &limiar);
+    scanf("%d", &n);
+
+    int A[n][n];
 
     for (l = 0; l < n; l++)
     {
         for (c = 0; c < n; c++)
         {
-            scanf("%d", &matriz[l][c]);
+            scanf("%d", &A[l][c]);
         }
     }
 
-    if (strcmp(pos, "acima") == 0)
+    if (!strcmp(string, acima))
     {
         for (l = 0; l < n; l++)
         {
-            for (c = 0; c < n; c++)
+            for (c = l + 1; c < n; c++)
             {
+                soma += A[l][c];
+            }
+        }
+    }
+    else
+    {
+        for (l = 0; l < n; l++)
+        {
+            for (c = 0; c < l; c++)
+            {
+                soma += A[l][c];
+            }
+        }
+    }
 
-                if (c > l)
-                {
-                    somacima += matriz[l][c];
-                }
-            }
-        }
-        if (somacima > limiar)
-        {
-            printf("True");
-        }
-        else
-        {
-            printf("False");
-        }
-    }
-    else if (strcmp(pos, "abaixo") == 0)
+    if (soma > limiar)
     {
-        for (l = 0; l < n; l++)
-        {
-            for (c = 0; c < n; c++)
-            {
-                if (l > c)
-                {
-                    somabaixo += matriz[l][c];
-                }
-            }
-        }
-        if (somacima > limiar)
-        {
-            printf("True");
-        }
-        else
-        {
-            printf("False");
-        }
+        printf("True\n");
     }
+    else if (soma < limiar)
+    {
+        printf("False\n");
+    }
+
     return 0;
 }
